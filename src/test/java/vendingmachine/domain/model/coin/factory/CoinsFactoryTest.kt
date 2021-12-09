@@ -31,7 +31,7 @@ internal class CoinsFactoryTest {
     }
 
     @ParameterizedTest
-    @ValueSource(strings = ["a", "", "-1"])
+    @ValueSource(strings = ["a", "", "-1", "-500", "9"])
     fun `이상한 입력`(coinValue: String) {
         val coinsFactory = object : AbstractCoinsFactory(coinValue) {
             override fun createCoins(): Coins = Coins()
