@@ -10,9 +10,9 @@ abstract class AbstractCoinsFactory(private val coin: String) {
         try {
             coin.toInt()
         } catch (e: NumberFormatException) {
-            throw IllegalArgumentException("낫 숫자")
+            throw IllegalArgumentException("[ERROR] 금액은 숫자여야 합니다.")
         }
 
-        require(coin.toInt() % Coin.minimum().amount == 0) { "으악" }
+        require(coin.toInt() % Coin.minimum().amount == 0) { "[ERROR] 금액을 동전으로 변환할 수 없습니다." }
     }
 }
