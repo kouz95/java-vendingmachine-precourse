@@ -1,4 +1,7 @@
-package vendingmachine.domain.model
+package vendingmachine.domain.model.coin.factory
+
+import vendingmachine.domain.model.coin.Coin
+import vendingmachine.domain.model.coin.Coins
 
 class RandomCoinsFactory(private val coin: String) : AbstractCoinsFactory(coin) {
     override fun createCoins(): Coins {

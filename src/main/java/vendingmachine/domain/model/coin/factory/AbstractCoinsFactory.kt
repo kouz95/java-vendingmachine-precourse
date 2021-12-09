@@ -1,4 +1,7 @@
-package vendingmachine.domain.model
+package vendingmachine.domain.model.coin.factory
+
+import vendingmachine.domain.model.coin.Coin
+import vendingmachine.domain.model.coin.Coins
 
 abstract class AbstractCoinsFactory(private val coin: String) {
     protected abstract fun createCoins(): Coins

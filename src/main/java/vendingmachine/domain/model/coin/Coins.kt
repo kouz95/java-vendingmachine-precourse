@@ -1,4 +1,4 @@
-package vendingmachine.domain.model
+package vendingmachine.domain.model.coin
 
 data class Coins(val coins: Map<Coin, Int> = mapOf()) {
     val totalAmount: Int

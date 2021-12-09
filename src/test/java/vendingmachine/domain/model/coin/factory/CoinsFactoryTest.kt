@@ -1,9 +1,11 @@
-package vendingmachine.domain.model
+package vendingmachine.domain.model.coin.factory
 
 import org.assertj.core.api.Assertions
 import org.junit.jupiter.api.Test
 import org.junit.jupiter.params.ParameterizedTest
 import org.junit.jupiter.params.provider.ValueSource
+import vendingmachine.domain.model.coin.Coin
+import vendingmachine.domain.model.coin.Coins
 
 internal class CoinsFactoryTest {
 
