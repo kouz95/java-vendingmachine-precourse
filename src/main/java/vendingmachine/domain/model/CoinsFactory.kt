@@ -1,5 +1,5 @@
 package vendingmachine.domain.model
 
 interface CoinsFactory {
-    fun create(coin: String): Coins
+    fun create(): Coins
 }
