@@ -9,6 +9,9 @@ object InputView {
     fun products() = println("상품명과 가격, 수량을 입력해 주세요.")
         .run { Console.readLine() }!!
 
-    fun customerAmount() = println("투입 금액을 입력해 주세요.")
+    fun customerPurchaseAmount() = println("투입 금액을 입력해 주세요.")
+        .run { Console.readLine() }!!
+
+    fun purchaseProductName() = println("구매할 상품명을 입력해 주세요.")
         .run { Console.readLine() }!!
 }

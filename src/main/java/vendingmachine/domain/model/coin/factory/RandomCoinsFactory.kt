@@ -12,11 +12,10 @@ class RandomCoinsFactory(private val coin: String) : AbstractCoinsFactory(coin) 
 
         while (remainders != 0) {
             val random = Coin.random()
-            when {
-                remainders % random.amount == 0 -> {
-                    result += (random to result[random]!! + 1)
-                    remainders -= random.amount
-                }
+            if (remainders.rem(random.amount) == 0) {
+                result.plusAssign(random to result[random]!! + 1)
+                remainders.minus(random.amount)
+                    .also { remainders = it }
             }
         }
 
